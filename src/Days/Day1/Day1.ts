@@ -1,18 +1,17 @@
 import { IDay } from "../IDay";
-import { readFileSync } from "fs";
-import path from "path";
+import { FileHandler } from "../../Utils/FileHandler";
 
 export class Day1 implements IDay {
 
-    getInputs() {
-        const datas: string = readFileSync(path.join(__dirname, "data.txt"), "utf8");
-        return datas.split("\n");
-    }
-
+    /**
+     * Get the sum of the calories
+     * 
+     * @returns {number[]} - Sum of the calories
+     */
     getSumCalories() {
         const calories: number[] = [];
         let sum = 0;
-        for (const input of this.getInputs()) {
+        for (const input of new FileHandler("Day1/data.txt").getInputs()) {
             if (input !== '') {
                 if (isNaN(parseInt(input))) {
                     throw new Error("Invalid input");

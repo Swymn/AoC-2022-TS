@@ -1,3 +1,3 @@
-import { Day1 } from "./Days/Day1/Day1";
+import { Day2 } from './Days/Day2/Day2';
 
-new Day1().run();
+new Day2().run();
