@@ -8,6 +8,11 @@ export class FileHandler {
         this.filename = filename;
     }
 
+    /**
+     * Get the inputs from the file (BASE DIR: src/Days/)
+     * 
+     * @returns {string[]} - Inputs from the file
+     */
     public getInputs(): string[] {
         const path = process.env.PWD;
         if (path === undefined) return [];

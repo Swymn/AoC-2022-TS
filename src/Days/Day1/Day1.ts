@@ -3,6 +3,11 @@ import { FileHandler } from "../../Utils/FileHandler";
 
 export class Day1 implements IDay {
 
+    /**
+     * Get the sum of the calories
+     * 
+     * @returns {number[]} - Sum of the calories
+     */
     getSumCalories() {
         const calories: number[] = [];
         let sum = 0;
